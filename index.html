@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- ══ NAVIGATION ══ -->
   <nav>
     <a href="index.html" class="nav-logo">Hannah Smith Photography</a>
     <ul class="nav-links">
@@ -19,73 +18,42 @@
 
   <main>
 
-    <!-- ══ HERO ══
-         Upload your hero image to: images/hero.jpg
-         The image will display at its FULL natural size — never cropped.
-         Any width works. Landscape photos look best here.
-    ══ -->
+    <!-- HERO: upload to images/hero.jpg — displays full width at natural ratio, never cropped -->
     <section class="hero">
       <img src="images/hero.jpg" alt="Hannah Smith Photography" />
     </section>
 
-    <!-- ══ WELCOME ══ -->
-    <section class="welcome"><div class="welcome-inner"><h2>Welcome</h2></div></section>
+    <!-- WELCOME -->
+    <section class="welcome">
+      <h2>Welcome</h2>
+    </section>
 
-    <!-- ══ CAROUSEL ══ -->
+    <!-- CAROUSEL -->
     <section id="work">
       <div class="carousel-outer">
-
         <button class="carousel-btn prev" aria-label="Previous">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
-
         <div class="carousel-track" id="carouselTrack">
-          <!--
-            PORTRAIT CAROUSEL IMAGES
-            Upload to: images/portraits/
-            Name them: portrait-1.jpg, portrait-2.jpg, portrait-3.jpg ... etc.
-            Images show at their NATURAL SIZE — no cropping.
-            Add or remove slides freely — just copy a <div class="carousel-slide"> block.
-          -->
-          <div class="carousel-slide">
-            <img src="images/portraits/portrait-1.jpg" alt="Portrait 1" />
-          </div>
-          <div class="carousel-slide">
-            <img src="images/portraits/portrait-2.jpg" alt="Portrait 2" />
-          </div>
-          <div class="carousel-slide">
-            <img src="images/portraits/portrait-3.jpg" alt="Portrait 3" />
-          </div>
-          <div class="carousel-slide">
-            <img src="images/portraits/portrait-4.jpg" alt="Portrait 4" />
-          </div>
-          <div class="carousel-slide">
-            <img src="images/portraits/portrait-5.jpg" alt="Portrait 5" />
-          </div>
-          <div class="carousel-slide">
-            <img src="images/portraits/portrait-6.jpg" alt="Portrait 6" />
-          </div>
-          <div class="carousel-slide">
-            <img src="images/portraits/portrait-7.jpg" alt="Portrait 7" />
-          </div>
-          <div class="carousel-slide">
-            <img src="images/portraits/portrait-8.jpg" alt="Portrait 8" />
-          </div>
+          <!-- Upload portraits to images/portraits/ named portrait-1.jpg, portrait-2.jpg etc.
+               To reorder: move blocks around. To add more: copy a block. -->
+          <div class="carousel-slide"><img src="images/portraits/portrait-1.jpg" alt="Portrait 1" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-2.jpg" alt="Portrait 2" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-3.jpg" alt="Portrait 3" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-4.jpg" alt="Portrait 4" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-5.jpg" alt="Portrait 5" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-6.jpg" alt="Portrait 6" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-7.jpg" alt="Portrait 7" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-8.jpg" alt="Portrait 8" /></div>
         </div>
-
         <button class="carousel-btn next" aria-label="Next">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
-
       </div>
 
-      <!-- ══ CAPTION — Recent Work left, paragraph right ══ -->
-      <div class="caption-block"><p class="caption-title">Recent Work</p>
-        
+      <!-- Caption below carousel -->
+      <div class="caption-block">
+        <p class="caption-title">Recent work</p>
         <p class="caption-body">
           An exploration of impermanence and our relationship to ageing, with a focus on the moment
           we first notice subtle shifts showing the transition from youth into maturity. Using nature
@@ -93,127 +61,69 @@
           varied sentiments that people carry with them during this phase, ranging from fear and
           uncertainty to peace and strength.
         </p>
-      
-        <div class="g-item"><img src="images/gallery/gallery-10.jpg" alt="Gallery 10" /></div>
-        <div class="g-item"><img src="images/gallery/gallery-11.jpg" alt="Gallery 11" /></div>
-        <div class="g-item"><img src="images/gallery/gallery-12.jpg" alt="Gallery 12" /></div>
-        <div class="g-item"><img src="images/gallery/gallery-13.jpg" alt="Gallery 13" /></div>
-
       </div>
     </section>
 
-    <!-- ══ GALLERY (DARK) ══ -->
+    <!-- GALLERY: dark background, images at natural size, flexible cluster.
+         To reorder: move .g-item blocks around.
+         To add more: copy a .g-item block and update the src number. -->
     <section class="gallery-section">
-      <h2 class="gallery-title">Selected Work</h2>
-
-      <!--
-        GALLERY IMAGES
-        Upload to: images/gallery/
-        Name them: gallery-1.jpg, gallery-2.jpg ... etc.
-        Images display at their NATURAL SIZE in a flexible column cluster.
-        The layout automatically adapts to whatever proportions you upload.
-        Add or remove <div class="g-item"> blocks freely.
-      -->
       <div class="gallery-cluster">
-        <div class="g-item">
-          <img src="images/gallery/gallery-1.jpg" alt="Gallery 1" />
-        </div>
-        <div class="g-item">
-          <img src="images/gallery/gallery-2.jpg" alt="Gallery 2" />
-        </div>
-        <div class="g-item">
-          <img src="images/gallery/gallery-3.jpg" alt="Gallery 3" />
-        </div>
-        <div class="g-item">
-          <img src="images/gallery/gallery-4.jpg" alt="Gallery 4" />
-        </div>
-        <div class="g-item">
-          <img src="images/gallery/gallery-5.jpg" alt="Gallery 5" />
-        </div>
-        <div class="g-item">
-          <img src="images/gallery/gallery-6.jpg" alt="Gallery 6" />
-        </div>
-        <div class="g-item">
-          <img src="images/gallery/gallery-7.jpg" alt="Gallery 7" />
-        </div>
-        <div class="g-item">
-          <img src="images/gallery/gallery-8.jpg" alt="Gallery 8" />
-        </div>
-        <div class="g-item">
-          <img src="images/gallery/gallery-9.jpg" alt="Gallery 9" />
-        </div>
+        <div class="g-item"><img src="images/gallery/gallery-1.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-2.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-3.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-4.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-5.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-6.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-7.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-8.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-9.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-10.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-11.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-12.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-13.jpg" alt="" /></div>
       </div>
     </section>
 
   </main>
 
-  <!-- ══ FOOTER ══ -->
   <footer>
     <span class="footer-copy">&copy; 2026 Hannah Smith Photography</span>
     <div class="footer-icons">
-      <!-- Replace # with your Instagram URL -->
-      <a href="#" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-          <circle cx="12" cy="12" r="4"></circle>
-          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle>
-        </svg>
+      <a href="#" aria-label="Instagram"><!-- replace # with your Instagram URL -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle></svg>
       </a>
-      <!-- Replace YOUR-EMAIL-HERE with your email -->
-      <a href="mailto:YOUR-EMAIL-HERE" aria-label="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
+      <a href="mailto:YOUR-EMAIL-HERE" aria-label="Email"><!-- replace YOUR-EMAIL-HERE -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
       </a>
     </div>
   </footer>
 
-  <!-- ══ CAROUSEL SCRIPT
-       - Shows 3 slides at once
-       - Slides one image at a time
-       - Auto-advances every 3 seconds
-       - Loops endlessly back to the start
-  ══ -->
   <script>
     (function () {
       const track = document.getElementById('carouselTrack');
       const slides = Array.from(track.querySelectorAll('.carousel-slide'));
       const total = slides.length;
-      const VISIBLE = window.innerWidth < 900 ? 1 : 3;
-      const INTERVAL = 3000; // 3 seconds
+      const VISIBLE = 3;
+      const INTERVAL = 3000;
       let current = 0;
       let timer;
 
       function setWidths() {
-        const slideWidth = track.parentElement.offsetWidth / VISIBLE;
-        slides.forEach(s => s.style.width = slideWidth + 'px');
+        const w = track.parentElement.offsetWidth / VISIBLE;
+        slides.forEach(s => s.style.width = w + 'px');
       }
-
       function goTo(idx) {
-        // Loop: wrap around
         current = ((idx % total) + total) % total;
-        const slideWidth = track.parentElement.offsetWidth / VISIBLE;
-        track.style.transform = `translateX(-${current * slideWidth}px)`;
+        const w = track.parentElement.offsetWidth / VISIBLE;
+        track.style.transform = `translateX(-${current * w}px)`;
       }
-
-      function next() { goTo(current + 1); }
-      function prev() { goTo(current - 1); }
-
       function startAuto() {
         clearInterval(timer);
-        timer = setInterval(next, INTERVAL);
+        timer = setInterval(() => goTo(current + 1), INTERVAL);
       }
-
-      // Arrow buttons pause then resume auto-play
-      document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
-        prev(); startAuto();
-      });
-      document.querySelector('.carousel-btn.next').addEventListener('click', () => {
-        next(); startAuto();
-      });
-
-      // Init
+      document.querySelector('.carousel-btn.prev').addEventListener('click', () => { goTo(current - 1); startAuto(); });
+      document.querySelector('.carousel-btn.next').addEventListener('click', () => { goTo(current + 1); startAuto(); });
       setWidths();
       startAuto();
       window.addEventListener('resize', () => { setWidths(); goTo(current); });
