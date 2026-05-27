@@ -776,3 +776,47 @@ height:auto !important;
 grid-template-columns:repeat(2,1fr)!important;
 }
 }
+
+
+/* ===== V6 TRUE FIX ===== */
+/* The issue was not spacing — gallery inherited old CSS columns.
+   Reset completely. */
+
+.gallery-cluster{
+  columns: unset !important;
+  column-count: unset !important;
+  display:grid !important;
+  grid-template-columns:repeat(4, minmax(0,1fr)) !important;
+  gap:14px !important;
+  width:100%;
+}
+
+.gallery-cluster > *{
+  break-inside: unset !important;
+  page-break-inside: auto !important;
+}
+
+.gallery-section{
+  background:#111010 !important;
+  display:block !important;
+  overflow:hidden !important;
+  position:relative;
+  z-index:1;
+}
+
+#work{
+  background:#fff !important;
+  overflow:visible !important;
+}
+
+.caption-block{
+  background:#fff !important;
+  position:relative;
+  z-index:10;
+}
+
+@media (max-width:900px){
+  .gallery-cluster{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
