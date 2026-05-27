@@ -529,3 +529,89 @@ display:grid !important;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:14px;
 }
+
+
+/* ===== FINAL TWEAKS ===== */
+
+/* Header */
+.nav-logo{
+font-size:2.6rem !important;
+letter-spacing:.01em;
+font-weight:400;
+}
+
+/* Footer year */
+.footer-copy{
+font-size:.78rem;
+}
+
+/* Recent work left align */
+.caption-block{
+display:flex;
+flex-direction:column;
+align-items:flex-start !important;
+justify-content:flex-start;
+text-align:left !important;
+gap:18px;
+max-width:900px;
+margin:0 auto;
+}
+
+.caption-title{
+font-size:1.8rem !important;
+letter-spacing:.02em;
+}
+
+.caption-body{
+text-align:left !important;
+max-width:760px;
+margin:0;
+font-size:1rem;
+}
+
+/* Selected Work title */
+.gallery-title,
+.gallery-section h2{
+font-size:1.8rem !important;
+text-align:left;
+margin-bottom:48px;
+}
+
+/* Gallery equal spacing */
+.gallery-cluster{
+display:grid !important;
+grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+gap:14px !important;
+align-items:start;
+padding:0;
+}
+
+.g-item{
+margin:0 !important;
+padding:0 !important;
+}
+
+.g-item img{
+width:100%;
+height:auto !important;
+display:block;
+object-fit:contain !important;
+}
+
+/* Phone 2 columns */
+@media(max-width:900px){
+.gallery-cluster{
+grid-template-columns:repeat(2,1fr)!important;
+}
+.nav-logo{
+font-size:1.4rem !important;
+}
+}
+
+/* ensure nav height accommodates logo */
+nav{
+min-height:90px;
+}
+.hero{
+margin-top:90px;
+}
