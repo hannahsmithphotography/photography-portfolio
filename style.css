@@ -712,3 +712,67 @@ flex-direction:column !important;
 gap:20px !important;
 }
 }
+
+
+/* ===== V5 GALLERY CONTAINMENT FIX ===== */
+
+/* Recent work should end cleanly */
+#work{
+display:block;
+overflow:hidden;
+padding-bottom:80px !important;
+}
+
+/* Keep caption independent */
+.caption-block{
+display:flex !important;
+flex-direction:row !important;
+position:relative;
+z-index:2;
+background:#fff;
+padding:56px 40px 100px !important;
+margin:0 auto;
+}
+
+/* Force gallery to start BELOW white section */
+.gallery-section{
+position:relative;
+z-index:1;
+background:var(--black);
+display:block;
+width:100%;
+clear:both;
+margin-top:0 !important;
+padding:90px 40px 100px !important;
+}
+
+/* Critical fix */
+.gallery-cluster{
+display:grid !important;
+grid-template-columns:repeat(4, minmax(0,1fr)) !important;
+gap:14px !important;
+width:100%;
+margin-top:0 !important;
+align-items:start;
+}
+
+/* stop masonry behavior completely */
+.gallery-cluster .g-item{
+break-inside:auto !important;
+page-break-inside:auto !important;
+display:block;
+margin:0 !important;
+}
+
+.gallery-cluster img{
+display:block;
+width:100%;
+height:auto !important;
+}
+
+/* Mobile */
+@media(max-width:900px){
+.gallery-cluster{
+grid-template-columns:repeat(2,1fr)!important;
+}
+}
