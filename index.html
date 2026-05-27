@@ -18,7 +18,7 @@
 
   <main>
 
-    <!-- HERO: upload to images/hero.jpg — displays full width at natural ratio, never cropped -->
+    <!-- HERO: upload to images/hero.jpg -->
     <section class="hero">
       <img src="images/hero.jpg" alt="Hannah Smith Photography" />
     </section>
@@ -28,15 +28,18 @@
       <h2>Welcome</h2>
     </section>
 
-    <!-- CAROUSEL -->
+    <!-- CAROUSEL: true infinite loop, 3 visible, slides one at a time every 3s -->
     <section id="work">
       <div class="carousel-outer">
         <button class="carousel-btn prev" aria-label="Previous">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
         <div class="carousel-track" id="carouselTrack">
-          <!-- Upload portraits to images/portraits/ named portrait-1.jpg, portrait-2.jpg etc.
-               To reorder: move blocks around. To add more: copy a block. -->
+          <!--
+            To ADD more portraits: copy a carousel-slide block, increment the number.
+            To REORDER: move blocks around.
+            The infinite loop is handled by JS — just keep slides here, don't duplicate.
+          -->
           <div class="carousel-slide"><img src="images/portraits/portrait-1.jpg" alt="Portrait 1" /></div>
           <div class="carousel-slide"><img src="images/portraits/portrait-2.jpg" alt="Portrait 2" /></div>
           <div class="carousel-slide"><img src="images/portraits/portrait-3.jpg" alt="Portrait 3" /></div>
@@ -45,13 +48,18 @@
           <div class="carousel-slide"><img src="images/portraits/portrait-6.jpg" alt="Portrait 6" /></div>
           <div class="carousel-slide"><img src="images/portraits/portrait-7.jpg" alt="Portrait 7" /></div>
           <div class="carousel-slide"><img src="images/portraits/portrait-8.jpg" alt="Portrait 8" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-9.jpg" alt="Portrait 9" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-10.jpg" alt="Portrait 10" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-11.jpg" alt="Portrait 11" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-12.jpg" alt="Portrait 12" /></div>
+          <div class="carousel-slide"><img src="images/portraits/portrait-13.jpg" alt="Portrait 13" /></div>
         </div>
         <button class="carousel-btn next" aria-label="Next">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
       </div>
 
-      <!-- Caption below carousel -->
+      <!-- Caption -->
       <div class="caption-block">
         <p class="caption-title">Recent work</p>
         <p class="caption-body">
@@ -64,9 +72,10 @@
       </div>
     </section>
 
-    <!-- GALLERY: dark background, images at natural size, flexible cluster.
-         To reorder: move .g-item blocks around.
-         To add more: copy a .g-item block and update the src number. -->
+    <!-- GALLERY: dark, flexible columns cluster, natural image sizes.
+         To ADD more: copy a .g-item block and update the number.
+         To REORDER: move .g-item blocks into whatever order looks best.
+         No limit — add as many as you like. -->
     <section class="gallery-section">
       <div class="gallery-cluster">
         <div class="g-item"><img src="images/gallery/gallery-1.jpg" alt="" /></div>
@@ -82,6 +91,7 @@
         <div class="g-item"><img src="images/gallery/gallery-11.jpg" alt="" /></div>
         <div class="g-item"><img src="images/gallery/gallery-12.jpg" alt="" /></div>
         <div class="g-item"><img src="images/gallery/gallery-13.jpg" alt="" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-14.jpg" alt="" /></div>
       </div>
     </section>
 
@@ -90,10 +100,10 @@
   <footer>
     <span class="footer-copy">&copy; 2026 Hannah Smith Photography</span>
     <div class="footer-icons">
-      <a href="https://www.instagram.com/hannahsmithphotographyy?igsh=MWJ0YjgxeHY4YXhyeg%3D%3D&utm_source=qr" aria-label="Instagram"><!-- replace # with your Instagram URL -->
+      <a href="#" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle></svg>
       </a>
-      <a href="mailto:hannahsmith7252@gmail.com" aria-label="Email"><!-- replace hannahsmith7252@gmail.com -->
+      <a href="mailto:YOUR-EMAIL-HERE" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
       </a>
     </div>
@@ -102,31 +112,67 @@
   <script>
     (function () {
       const track = document.getElementById('carouselTrack');
-      const slides = Array.from(track.querySelectorAll('.carousel-slide'));
-      const total = slides.length;
       const VISIBLE = 3;
       const INTERVAL = 3000;
-      let current = 0;
+
+      // Clone slides for true infinite loop
+      const originalSlides = Array.from(track.querySelectorAll('.carousel-slide'));
+      const total = originalSlides.length;
+
+      // Prepend clones of last VISIBLE slides, append clones of first VISIBLE slides
+      const prepend = originalSlides.slice(-VISIBLE).map(s => s.cloneNode(true));
+      const append  = originalSlides.slice(0, VISIBLE).map(s => s.cloneNode(true));
+      prepend.forEach(s => track.insertBefore(s, track.firstChild));
+      append.forEach(s => track.appendChild(s));
+
+      const allSlides = Array.from(track.querySelectorAll('.carousel-slide'));
+      let current = VISIBLE; // start after prepended clones
       let timer;
+      let isTransitioning = false;
 
       function setWidths() {
         const w = track.parentElement.offsetWidth / VISIBLE;
-        slides.forEach(s => s.style.width = w + 'px');
+        allSlides.forEach(s => s.style.width = w + 'px');
+        // Position without animation on resize
+        track.style.transition = 'none';
+        track.style.transform = `translateX(-${current * (track.parentElement.offsetWidth / VISIBLE)}px)`;
       }
-      function goTo(idx) {
-        current = ((idx % total) + total) % total;
+
+      function goTo(idx, animate) {
+        if (isTransitioning) return;
+        current = idx;
         const w = track.parentElement.offsetWidth / VISIBLE;
+        track.style.transition = animate === false ? 'none' : 'transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
         track.style.transform = `translateX(-${current * w}px)`;
+        if (animate !== false) isTransitioning = true;
       }
+
+      // After transition ends, silently jump if we're on a clone
+      track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        if (current <= VISIBLE - 1) {
+          // jumped past start clones — silently reposition to real end
+          goTo(current + total, false);
+        } else if (current >= total + VISIBLE) {
+          // jumped past end clones — silently reposition to real start
+          goTo(current - total, false);
+        }
+      });
+
+      function next() { goTo(current + 1, true); }
+      function prev() { goTo(current - 1, true); }
+
       function startAuto() {
         clearInterval(timer);
-        timer = setInterval(() => goTo(current + 1), INTERVAL);
+        timer = setInterval(next, INTERVAL);
       }
-      document.querySelector('.carousel-btn.prev').addEventListener('click', () => { goTo(current - 1); startAuto(); });
-      document.querySelector('.carousel-btn.next').addEventListener('click', () => { goTo(current + 1); startAuto(); });
+
+      document.querySelector('.carousel-btn.prev').addEventListener('click', () => { prev(); startAuto(); });
+      document.querySelector('.carousel-btn.next').addEventListener('click', () => { next(); startAuto(); });
+
       setWidths();
       startAuto();
-      window.addEventListener('resize', () => { setWidths(); goTo(current); });
+      window.addEventListener('resize', setWidths);
     })();
   </script>
 
