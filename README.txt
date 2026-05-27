@@ -1,11 +1,9 @@
-Replace:
-index.html
-style.css
-contact.html
+Built from V3.
 
-Keep images folder.
-Gallery now uses editorial cluster layout:
-- equal spacing
-- uneven rows
+Changes:
+- 2026 copyright
+- larger logo
+- portrait contact section
+- cluster gallery
 - 4 columns desktop
 - 2 columns mobile

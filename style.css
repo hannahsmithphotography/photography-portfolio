@@ -617,9 +617,9 @@ margin-top:90px;
 }
 
 
-/* ===== V7 EDITORIAL CLUSTER ===== */
+/* ===== CLEAN REBUILD FROM V3 ===== */
 
-/* Larger branding */
+/* Header */
 nav{
 min-height:110px;
 }
@@ -627,63 +627,71 @@ min-height:110px;
 margin-top:110px;
 }
 .nav-logo{
-font-size:3.8rem !important;
+font-size:3.9rem !important;
+font-weight:400;
 line-height:1;
 }
 
-/* Keep recent work centered */
-.caption-block{
-display:flex;
-align-items:flex-start;
-gap:80px;
-max-width:1200px;
-margin:0 auto;
-padding:56px 40px 80px;
-}
-
+/* Titles */
 .caption-title{
 font-size:1.8rem !important;
 }
-
-.gallery-title,
-.gallery-section h2{
+.gallery-heading{
 font-size:1.8rem !important;
 }
 
-/* TRUE CLUSTER */
+/* Keep Recent Work centered like v3 */
+.caption-block{
+display:flex !important;
+align-items:flex-start;
+justify-content:flex-start;
+gap:80px;
+max-width:1200px;
+margin:0 auto;
+}
+
+/* Gallery — true cluster */
 .gallery-section{
 background:#111010;
 padding:72px 40px 80px;
-overflow:hidden;
 }
 
-.editorial-cluster{
+.gallery-cluster{
 column-count:4 !important;
 column-gap:14px !important;
-columns:auto !important;
 }
 
-.editorial-cluster .g-item{
-display:inline-block;
+.gallery-cluster .g-item{
+break-inside:avoid;
+margin-bottom:14px !important;
+}
+
+.gallery-cluster .g-item img{
 width:100%;
-margin:0 0 14px 0 !important;
-break-inside:avoid !important;
-overflow:hidden;
-}
-
-.editorial-cluster .g-item img{
+height:auto;
 display:block;
-width:100%;
-height:auto !important;
-object-fit:contain !important;
 }
 
-/* phone */
-@media(max-width:900px){
-.editorial-cluster{
-column-count:2 !important;
+/* Contact portrait */
+.portrait-frame{
+width:min(500px,100%);
+margin:auto;
 }
+
+.portrait-frame img{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* Mobile */
+@media(max-width:900px){
+
 .nav-logo{
 font-size:2.2rem !important;
+}
+
+.gallery-cluster{
+column-count:2 !important;
 }
 }
