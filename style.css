@@ -617,206 +617,73 @@ margin-top:90px;
 }
 
 
-/* ===== V4 FIXES ===== */
+/* ===== V7 EDITORIAL CLUSTER ===== */
 
-/* Bigger brand */
+/* Larger branding */
 nav{
-min-height:120px !important;
-padding:0 48px;
+min-height:110px;
 }
-
+.hero{
+margin-top:110px;
+}
 .nav-logo{
 font-size:3.8rem !important;
-font-weight:400;
 line-height:1;
 }
 
-/* Hero offset */
-.hero{
-margin-top:120px !important;
-}
-
-/* Restore Recent Work section */
+/* Keep recent work centered */
 .caption-block{
-display:flex !important;
-flex-direction:row !important;
-align-items:flex-start !important;
-justify-content:flex-start;
-gap:80px !important;
-max-width:1400px;
+display:flex;
+align-items:flex-start;
+gap:80px;
+max-width:1200px;
 margin:0 auto;
 padding:56px 40px 80px;
-text-align:left;
 }
 
 .caption-title{
 font-size:1.8rem !important;
-white-space:nowrap;
-padding-top:4px;
 }
 
-.caption-body{
-max-width:700px;
-text-align:left !important;
+.gallery-title,
+.gallery-section h2{
+font-size:1.8rem !important;
 }
 
-/* HARD separation between Recent Work and Gallery */
+/* TRUE CLUSTER */
 .gallery-section{
-clear:both;
-display:block;
-padding-top:120px !important;
-margin-top:40px !important;
+background:#111010;
+padding:72px 40px 80px;
+overflow:hidden;
 }
 
-.gallery-section h2,
-.gallery-title{
-display:block;
+.editorial-cluster{
+column-count:4 !important;
+column-gap:14px !important;
+columns:auto !important;
+}
+
+.editorial-cluster .g-item{
+display:inline-block;
 width:100%;
-margin-bottom:56px !important;
+margin:0 0 14px 0 !important;
+break-inside:avoid !important;
+overflow:hidden;
 }
 
-/* Prevent gallery items escaping upward */
-.gallery-cluster{
-display:grid !important;
-grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-gap:16px !important;
-align-items:start;
-isolation:isolate;
-clear:both;
-}
-
-.g-item{
-display:block;
-width:100%;
-}
-
-.g-item img{
+.editorial-cluster .g-item img{
 display:block;
 width:100%;
 height:auto !important;
 object-fit:contain !important;
 }
 
-/* Mobile */
+/* phone */
 @media(max-width:900px){
+.editorial-cluster{
+column-count:2 !important;
+}
 .nav-logo{
 font-size:2.2rem !important;
 }
-
-.gallery-cluster{
-grid-template-columns:repeat(2,1fr)!important;
-}
-
-.caption-block{
-flex-direction:column !important;
-gap:20px !important;
-}
-}
-
-
-/* ===== V5 GALLERY CONTAINMENT FIX ===== */
-
-/* Recent work should end cleanly */
-#work{
-display:block;
-overflow:hidden;
-padding-bottom:80px !important;
-}
-
-/* Keep caption independent */
-.caption-block{
-display:flex !important;
-flex-direction:row !important;
-position:relative;
-z-index:2;
-background:#fff;
-padding:56px 40px 100px !important;
-margin:0 auto;
-}
-
-/* Force gallery to start BELOW white section */
-.gallery-section{
-position:relative;
-z-index:1;
-background:var(--black);
-display:block;
-width:100%;
-clear:both;
-margin-top:0 !important;
-padding:90px 40px 100px !important;
-}
-
-/* Critical fix */
-.gallery-cluster{
-display:grid !important;
-grid-template-columns:repeat(4, minmax(0,1fr)) !important;
-gap:14px !important;
-width:100%;
-margin-top:0 !important;
-align-items:start;
-}
-
-/* stop masonry behavior completely */
-.gallery-cluster .g-item{
-break-inside:auto !important;
-page-break-inside:auto !important;
-display:block;
-margin:0 !important;
-}
-
-.gallery-cluster img{
-display:block;
-width:100%;
-height:auto !important;
-}
-
-/* Mobile */
-@media(max-width:900px){
-.gallery-cluster{
-grid-template-columns:repeat(2,1fr)!important;
-}
-}
-
-
-/* ===== V6 TRUE FIX ===== */
-/* The issue was not spacing — gallery inherited old CSS columns.
-   Reset completely. */
-
-.gallery-cluster{
-  columns: unset !important;
-  column-count: unset !important;
-  display:grid !important;
-  grid-template-columns:repeat(4, minmax(0,1fr)) !important;
-  gap:14px !important;
-  width:100%;
-}
-
-.gallery-cluster > *{
-  break-inside: unset !important;
-  page-break-inside: auto !important;
-}
-
-.gallery-section{
-  background:#111010 !important;
-  display:block !important;
-  overflow:hidden !important;
-  position:relative;
-  z-index:1;
-}
-
-#work{
-  background:#fff !important;
-  overflow:visible !important;
-}
-
-.caption-block{
-  background:#fff !important;
-  position:relative;
-  z-index:10;
-}
-
-@media (max-width:900px){
-  .gallery-cluster{
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-  }
 }
