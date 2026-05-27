@@ -1,0 +1,44 @@
+
+/* V10 — remove images from Recent Work strip */
+
+/* hide the portrait strip above Recent Work entirely */
+.series-grid,
+.series-row,
+.recent-grid,
+.recent-work-grid,
+.work-grid{
+display:none !important;
+}
+
+/* keep only text in Recent Work */
+#work .caption-block{
+display:block !important;
+max-width:900px;
+margin:0 auto;
+padding-bottom:80px;
+}
+
+/* gallery starts after text */
+.gallery-section{
+display:block !important;
+margin-top:0 !important;
+padding-top:80px !important;
+background:#080808 !important;
+}
+
+/* editorial cluster */
+.gallery-cluster{
+column-count:4 !important;
+column-gap:14px !important;
+}
+
+.gallery-cluster .g-item{
+break-inside:avoid;
+margin-bottom:14px !important;
+}
+
+@media(max-width:900px){
+.gallery-cluster{
+column-count:2 !important;
+}
+}
