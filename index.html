@@ -29,9 +29,7 @@
     </section>
 
     <!-- ══ WELCOME ══ -->
-    <section class="welcome">
-      <h2>Welcome</h2>
-    </section>
+    <section class="welcome"><div class="welcome-inner"><h2>Welcome</h2></div></section>
 
     <!-- ══ CAROUSEL ══ -->
     <section id="work">
@@ -87,7 +85,7 @@
 
       <!-- ══ CAPTION — Recent Work left, paragraph right ══ -->
       <div class="caption-block">
-        <p class="caption-title">Recent work</p>
+        
         <p class="caption-body">
           An exploration of impermanence and our relationship to ageing, with a focus on the moment
           we first notice subtle shifts showing the transition from youth into maturity. Using nature
@@ -95,12 +93,18 @@
           varied sentiments that people carry with them during this phase, ranging from fear and
           uncertainty to peace and strength.
         </p>
+      
+        <div class="g-item"><img src="images/gallery/gallery-10.jpg" alt="Gallery 10" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-11.jpg" alt="Gallery 11" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-12.jpg" alt="Gallery 12" /></div>
+        <div class="g-item"><img src="images/gallery/gallery-13.jpg" alt="Gallery 13" /></div>
+
       </div>
     </section>
 
     <!-- ══ GALLERY (DARK) ══ -->
     <section class="gallery-section">
-      <h2>Gallery</h2>
+      <h2>Selected Work</h2>
 
       <!--
         GALLERY IMAGES
@@ -145,7 +149,7 @@
 
   <!-- ══ FOOTER ══ -->
   <footer>
-    <span class="footer-copy">&copy; 2024 Hannah Smith Photography</span>
+    <span class="footer-copy">&copy; 2026 Hannah Smith Photography</span>
     <div class="footer-icons">
       <!-- Replace # with your Instagram URL -->
       <a href="#" aria-label="Instagram">
@@ -176,7 +180,7 @@
       const track = document.getElementById('carouselTrack');
       const slides = Array.from(track.querySelectorAll('.carousel-slide'));
       const total = slides.length;
-      const VISIBLE = 3;
+      const VISIBLE = window.innerWidth < 900 ? 1 : 3;
       const INTERVAL = 3000; // 3 seconds
       let current = 0;
       let timer;

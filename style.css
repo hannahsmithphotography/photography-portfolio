@@ -3,7 +3,7 @@
    Clean Minimal Editorial
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
 
 /* ── Variables ── */
 :root {
@@ -16,8 +16,8 @@
   --nav-height: 60px;
   --transition: 0.3s ease;
 
-  --font-display: 'Cormorant', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: 'Sofia Pro', sans-serif;
+  --font-body: 'Sofia Pro', sans-serif;
 }
 
 /* ── Reset ── */
@@ -405,4 +405,127 @@ a.c-value:hover { color: rgba(255,255,255,0.6); }
 @media (max-width: 560px) {
   .gallery-cluster { columns: 1; }
   .welcome { padding: 56px 24px 48px; }
+}
+
+
+/* USER REVISIONS */
+body{font-family:var(--font-body);}
+.hero{
+min-height:auto;
+display:block;
+}
+.hero img{
+width:100%;
+max-height:none;
+object-fit:contain!important;
+}
+.welcome{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:28vh;
+padding:120px 40px;
+}
+.welcome-inner{max-width:900px;text-align:center;}
+.welcome h2{
+font-size:clamp(2rem,5vw,4rem);
+letter-spacing:.03em;
+}
+.caption-block{
+justify-content:center;
+text-align:center;
+padding-top:32px;
+}
+.caption-body{
+max-width:900px;
+font-size:.95rem;
+}
+.gallery-section h2{
+margin-bottom:56px;
+text-align:center;
+color:white;
+}
+.gallery-cluster{
+columns:4 280px;
+column-gap:14px;
+}
+.g-item{
+break-inside:avoid;
+cursor:grab;
+}
+.g-item img{
+width:100%;
+height:auto!important;
+aspect-ratio:auto!important;
+object-fit:contain!important;
+}
+.carousel-slide{
+display:flex;
+align-items:flex-start;
+}
+.carousel-slide img{
+object-fit:contain!important;
+max-height:75vh;
+}
+
+
+/* ===== MANUAL REORDERABLE GALLERY GRID ===== */
+.gallery-cluster{
+display:grid !important;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:18px;
+columns:unset !important;
+align-items:start;
+}
+
+.g-item{
+position:relative;
+overflow:visible;
+}
+
+.g-item img{
+display:block;
+width:100%;
+height:auto;
+}
+
+/* Rearange order manually:
+.g-item:nth-child(1){order:4;}
+.g-item:nth-child(2){order:1;}
+*/
+
+@media (max-width:900px){
+.gallery-cluster{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:600px){
+.gallery-cluster{
+grid-template-columns:1fr;
+}
+}
+
+
+/* CONTACT PORTRAIT */
+.contact-qr{
+background:#f7f5f2;
+padding:80px;
+}
+.portrait-frame{
+width:min(520px,100%);
+margin:auto;
+}
+.portrait-frame img{
+width:100%;
+height:auto;
+display:block;
+object-fit:contain;
+}
+
+/* keep all gallery images visible */
+.gallery-cluster{
+display:grid !important;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:14px;
 }
