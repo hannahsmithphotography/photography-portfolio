@@ -10,75 +10,46 @@
 
   <!-- ══ NAVIGATION ══ -->
   <nav>
-    <a href="index.html" class="nav-logo">
-      <span class="name">Hannah Smith</span>
-      <span class="sub">Photography</span>
-    </a>
+    <a href="index.html" class="nav-logo">Hannah Smith Photography</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="galleries.html">Galleries</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="#work" class="active">Work</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <main>
 
-    <!-- ══ HERO ══ -->
+    <!-- ══ HERO ══
+         Upload your hero image to: images/hero.jpg
+         The image will display at its FULL natural size — never cropped.
+         Any width works. Landscape photos look best here.
+    ══ -->
     <section class="hero">
-      <!--
-        YOUR HERO IMAGE
-        Upload a wide landscape photo to: images/hero.jpg
-        Recommended size: 1800 x 700px
-      -->
       <img src="images/hero.jpg" alt="Hannah Smith Photography" />
-      <div class="hero-overlay"></div>
-      <div class="hero-text">
-        <p>Montreal · Portrait Photography</p>
-        <h1>Hannah Smith<br>Photography</h1>
-      </div>
     </section>
 
     <!-- ══ WELCOME ══ -->
     <section class="welcome">
-      <div class="welcome-left">
-        <h2>Welcome</h2>
-      </div>
-      <div class="welcome-right">
-        <div class="gold-bar"></div>
-        <!--
-          EDIT YOUR WELCOME TEXT BELOW
-        -->
-        <p>
-          I'm a Montreal-based portrait photographer. Feel free to reach out for collaborations or bookings!
-        </p>
-      </div>
+      <h2>Welcome</h2>
     </section>
 
-    <!-- ══ PORTRAIT CAROUSEL ══ -->
-    <section class="carousel-section">
-      <div class="carousel-header">
-        <div>
-          <span class="eyebrow">Series</span>
-          <h2>Recent Work</h2>
-        </div>
-        <span class="carousel-counter" id="carouselCounter">1 / 8</span>
-      </div>
+    <!-- ══ CAROUSEL ══ -->
+    <section id="work">
+      <div class="carousel-outer">
 
-      <div class="carousel-wrapper">
         <button class="carousel-btn prev" aria-label="Previous">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
         </button>
 
         <div class="carousel-track" id="carouselTrack">
           <!--
-            ADD YOUR PORTRAIT PHOTOS
+            PORTRAIT CAROUSEL IMAGES
             Upload to: images/portraits/
-            Name them: portrait-1.jpg, portrait-2.jpg ... portrait-8.jpg
-            Recommended size: 600 x 800px (portrait orientation)
-            Add or remove <div class="carousel-slide"> blocks as needed
+            Name them: portrait-1.jpg, portrait-2.jpg, portrait-3.jpg ... etc.
+            Images show at their NATURAL SIZE — no cropping.
+            Add or remove slides freely — just copy a <div class="carousel-slide"> block.
           -->
           <div class="carousel-slide">
             <img src="images/portraits/portrait-1.jpg" alt="Portrait 1" />
@@ -107,17 +78,16 @@
         </div>
 
         <button class="carousel-btn next" aria-label="Next">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
+
       </div>
 
-      <div class="carousel-dots" id="carouselDots"></div>
-
-      <!-- Caption -->
-      <div class="carousel-caption-block">
-        <p class="caption-title">Recent Work</p>
+      <!-- ══ CAPTION — Recent Work left, paragraph right ══ -->
+      <div class="caption-block">
+        <p class="caption-title">Recent work</p>
         <p class="caption-body">
           An exploration of impermanence and our relationship to ageing, with a focus on the moment
           we first notice subtle shifts showing the transition from youth into maturity. Using nature
@@ -128,55 +98,46 @@
       </div>
     </section>
 
-    <!-- ══ MAIN GALLERY (DARK) ══ -->
+    <!-- ══ GALLERY (DARK) ══ -->
     <section class="gallery-section">
-      <div class="gallery-header">
-        <div>
-          <span class="eyebrow">Selected Work</span>
-          <h2>Gallery</h2>
-        </div>
-        <a href="galleries.html" class="btn-outline">All Galleries</a>
-      </div>
+      <h2>Gallery</h2>
 
-      <div class="gallery-grid">
-        <!--
-          ADD YOUR GALLERY PHOTOS
-          Upload to: images/gallery/
-          Name them: gallery-1.jpg through gallery-9.jpg
-          Mix landscape and portrait shots — the grid handles layout automatically
-          Recommended: at least 900px on the longest side
-        -->
-        <div class="gallery-item">
+      <!--
+        GALLERY IMAGES
+        Upload to: images/gallery/
+        Name them: gallery-1.jpg, gallery-2.jpg ... etc.
+        Images display at their NATURAL SIZE in a flexible column cluster.
+        The layout automatically adapts to whatever proportions you upload.
+        Add or remove <div class="g-item"> blocks freely.
+      -->
+      <div class="gallery-cluster">
+        <div class="g-item">
           <img src="images/gallery/gallery-1.jpg" alt="Gallery 1" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="images/gallery/gallery-2.jpg" alt="Gallery 2" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="images/gallery/gallery-3.jpg" alt="Gallery 3" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="images/gallery/gallery-4.jpg" alt="Gallery 4" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="images/gallery/gallery-5.jpg" alt="Gallery 5" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="images/gallery/gallery-6.jpg" alt="Gallery 6" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="images/gallery/gallery-7.jpg" alt="Gallery 7" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="images/gallery/gallery-8.jpg" alt="Gallery 8" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="images/gallery/gallery-9.jpg" alt="Gallery 9" />
         </div>
-      </div>
-
-      <div class="gallery-cta">
-        <a href="galleries.html" class="btn-outline">View All Galleries</a>
       </div>
     </section>
 
@@ -184,16 +145,18 @@
 
   <!-- ══ FOOTER ══ -->
   <footer>
-    <span class="footer-copy">&copy; 2024 Hannah Smith Photography. All Rights Reserved.</span>
+    <span class="footer-copy">&copy; 2024 Hannah Smith Photography</span>
     <div class="footer-icons">
-      <a href="#" aria-label="Instagram"><!-- REPLACE # WITH YOUR INSTAGRAM URL -->
+      <!-- Replace # with your Instagram URL -->
+      <a href="#" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5"></rect>
           <circle cx="12" cy="12" r="4"></circle>
           <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle>
         </svg>
       </a>
-      <a href="mailto:YOUR-EMAIL-HERE" aria-label="Email"><!-- REPLACE YOUR-EMAIL-HERE -->
+      <!-- Replace YOUR-EMAIL-HERE with your email -->
+      <a href="mailto:YOUR-EMAIL-HERE" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
           <polyline points="22,6 12,13 2,6"></polyline>
@@ -202,56 +165,54 @@
     </div>
   </footer>
 
-  <!-- ══ CAROUSEL SCRIPT ══ -->
+  <!-- ══ CAROUSEL SCRIPT
+       - Shows 3 slides at once
+       - Slides one image at a time
+       - Auto-advances every 3 seconds
+       - Loops endlessly back to the start
+  ══ -->
   <script>
     (function () {
       const track = document.getElementById('carouselTrack');
-      const dotsContainer = document.getElementById('carouselDots');
-      const counter = document.getElementById('carouselCounter');
-      const slides = track.querySelectorAll('.carousel-slide');
+      const slides = Array.from(track.querySelectorAll('.carousel-slide'));
       const total = slides.length;
+      const VISIBLE = 3;
+      const INTERVAL = 3000; // 3 seconds
       let current = 0;
+      let timer;
 
-      function visible() {
-        if (window.innerWidth < 480) return 1;
-        if (window.innerWidth < 768) return 2;
-        return 4;
-      }
-
-      function maxIndex() { return Math.max(0, total - visible()); }
-
-      function buildDots() {
-        dotsContainer.innerHTML = '';
-        const pages = Math.ceil(total / visible());
-        for (let i = 0; i < pages; i++) {
-          const d = document.createElement('button');
-          d.className = 'dot' + (i === 0 ? ' active' : '');
-          d.setAttribute('aria-label', 'Page ' + (i + 1));
-          d.addEventListener('click', () => goTo(i * visible()));
-          dotsContainer.appendChild(d);
-        }
+      function setWidths() {
+        const slideWidth = track.parentElement.offsetWidth / VISIBLE;
+        slides.forEach(s => s.style.width = slideWidth + 'px');
       }
 
       function goTo(idx) {
-        current = Math.max(0, Math.min(idx, maxIndex()));
-        const w = slides[0].offsetWidth + 16;
-        track.style.transform = `translateX(-${current * w}px)`;
-        updateUI();
+        // Loop: wrap around
+        current = ((idx % total) + total) % total;
+        const slideWidth = track.parentElement.offsetWidth / VISIBLE;
+        track.style.transform = `translateX(-${current * slideWidth}px)`;
       }
 
-      function updateUI() {
-        const page = Math.round(current / visible());
-        dotsContainer.querySelectorAll('.dot').forEach((d, i) => {
-          d.classList.toggle('active', i === page);
-        });
-        counter.textContent = (current + 1) + ' / ' + total;
+      function next() { goTo(current + 1); }
+      function prev() { goTo(current - 1); }
+
+      function startAuto() {
+        clearInterval(timer);
+        timer = setInterval(next, INTERVAL);
       }
 
-      document.querySelector('.carousel-btn.prev').addEventListener('click', () => goTo(current - visible()));
-      document.querySelector('.carousel-btn.next').addEventListener('click', () => goTo(current + visible()));
+      // Arrow buttons pause then resume auto-play
+      document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+        prev(); startAuto();
+      });
+      document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+        next(); startAuto();
+      });
 
-      buildDots();
-      window.addEventListener('resize', () => { buildDots(); goTo(0); });
+      // Init
+      setWidths();
+      startAuto();
+      window.addEventListener('resize', () => { setWidths(); goTo(current); });
     })();
   </script>
 
