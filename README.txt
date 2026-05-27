@@ -1,1 +1,1 @@
-Replace index.html style.css contact.html. Keep images folder.
+Replace index.html, style.css, contact.html. Keep images folder.
