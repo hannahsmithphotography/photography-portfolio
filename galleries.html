@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galleries — Hannah Smith Photography</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="galleries-page">
+
+  <!-- ══ NAVIGATION ══ -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="name">Hannah Smith</span>
+      <span class="sub">Photography</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="galleries.html" class="active">Galleries</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══ PAGE HERO ══ -->
+  <div class="page-hero">
+    <p>Selected Work</p>
+    <h1>Galleries</h1>
+  </div>
+
+  <!-- ══ GALLERY CARDS ══ -->
+  <!--
+    HOW TO ADD A NEW GALLERY LATER:
+    1. Duplicate one of the <div class="gallery-card"> blocks below
+    2. Replace the image src with a cover photo for that gallery
+    3. Update the title and description
+    4. Remove the "Coming Soon" badge
+    5. Set the href on the <a> tag to your new gallery page (e.g. galleries/weddings.html)
+    6. Create that new HTML page (duplicate this file as a starting point)
+  -->
+  <div class="galleries-grid">
+
+    <!-- PORTRAITS -->
+    <a href="galleries/portraits.html" class="gallery-card">
+      <!--
+        Upload a cover photo for Portraits to: images/covers/portraits-cover.jpg
+      -->
+      <img src="images/covers/portraits-cover.jpg" alt="Portraits" />
+      <span class="gallery-card-badge">Coming Soon</span>
+      <div class="gallery-card-info">
+        <span>Series 01</span>
+        <h3>Portraits</h3>
+      </div>
+    </a>
+
+    <!-- TRAVEL -->
+    <a href="galleries/travel.html" class="gallery-card">
+      <!--
+        Upload a cover photo for Travel to: images/covers/travel-cover.jpg
+      -->
+      <img src="images/covers/travel-cover.jpg" alt="Travel" />
+      <span class="gallery-card-badge">Coming Soon</span>
+      <div class="gallery-card-info">
+        <span>Series 02</span>
+        <h3>Travel</h3>
+      </div>
+    </a>
+
+    <!-- FOOD -->
+    <a href="galleries/food.html" class="gallery-card">
+      <!--
+        Upload a cover photo for Food to: images/covers/food-cover.jpg
+      -->
+      <img src="images/covers/food-cover.jpg" alt="Food" />
+      <span class="gallery-card-badge">Coming Soon</span>
+      <div class="gallery-card-info">
+        <span>Series 03</span>
+        <h3>Food</h3>
+      </div>
+    </a>
+
+    <!--
+      ADD MORE GALLERIES HERE — copy and paste a card block above
+      Example:
+      <a href="galleries/weddings.html" class="gallery-card">
+        <img src="images/covers/weddings-cover.jpg" alt="Weddings" />
+        <div class="gallery-card-info">
+          <span>Series 04</span>
+          <h3>Weddings</h3>
+        </div>
+      </a>
+    -->
+
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <span class="footer-copy">&copy; 2024 Hannah Smith Photography. All Rights Reserved.</span>
+    <div class="footer-icons">
+      <a href="#" aria-label="Instagram"><!-- REPLACE # WITH YOUR INSTAGRAM URL -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+          <circle cx="12" cy="12" r="4"></circle>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </a>
+      <a href="mailto:YOUR-EMAIL-HERE" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
